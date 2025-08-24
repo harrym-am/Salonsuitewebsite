@@ -3478,16 +3478,6 @@ html {
     .ambassador-card {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Optimize gradients */
-    .hero-background {
-        background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
-    }
-    
-    /* Reduce animation complexity */
-    .floating-shapes {
-        display: none; /* Hide complex animations on mobile for better performance */
-    }
 }
 
 /* Mobile-specific loading states */
@@ -3840,12 +3830,13 @@ html {
     
     /* Dashboard Preview */
     .hero-visual {
-        display: none; /* Hide complex dashboard on mobile for better performance */
+        transform: scale(0.7);
+        margin-top: 1rem;
     }
     
     /* Floating shapes */
     .floating-shapes {
-        display: none; /* Hide animations on mobile */
+        transform: scale(0.6);
     }
 }
 
@@ -4157,9 +4148,9 @@ html {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
-    /* Optimize gradients */
+    /* Keep original gradients */
     .hero-background {
-        background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+        background: var(--gradient-primary);
     }
     
     /* Prevent horizontal scroll */
