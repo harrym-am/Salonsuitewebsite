@@ -3695,10 +3695,7 @@ html {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
-    /* Keep original gradients */
-    .hero-background {
-        background: var(--gradient-primary);
-    }
+
     
     /* Prevent horizontal scroll */
     body {
