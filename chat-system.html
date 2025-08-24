@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionary Chat System - Salon Suite</title>
+    <meta name="description" content="Experience the future of salon communication with our revolutionary chat system - 1-1 messaging, voice notes, photo uploads, and complete customer insights.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Salon Suite</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="chat-hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Revolutionary</span>
+                    <span class="title-line highlight">Chat System</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The only chat system built specifically for salons. 1-1 messaging, voice notes, 
+                    photo uploads, and complete customer insights - all included in your plan.
+                </p>
+                <div class="hero-cta">
+                    <button class="cta-primary">
+                        <span>Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No additional cost - included in all plans</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="simple-chat-demo">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="chat-info">
+                            <h3>Sarah Johnson</h3>
+                            <span class="status">Online</span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will slide in here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="chat-journey">
+        <div class="container">
+            <div class="journey-header">
+                <h2>Your Journey Through Revolutionary Communication</h2>
+                <p>Experience how our chat system transforms every customer interaction</p>
+            </div>
+            
+            <!-- Step 1: 1-1 Messaging -->
+            <div class="journey-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <div class="step-text">
+                        <h3>1-1 Direct Messaging</h3>
+                        <p>Connect directly with any customer through our intuitive chat interface. No more missed messages or lost conversations.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> Real-time messaging</li>
+                            <li><i class="fas fa-check"></i> Message history</li>
+                            <li><i class="fas fa-check"></i> Read receipts</li>
+                            <li><i class="fas fa-check"></i> Typing indicators</li>
+                        </ul>
+                    </div>
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Instant Connection</h4>
+                            <p>Start conversations that feel personal and professional</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Voice Notes -->
+            <div class="journey-step reverse">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h4>Voice Messages</h4>
+                            <p>Sometimes talking is easier than typing</p>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <h3>Voice Notes & Audio Messages</h3>
+                        <p>Send and receive voice messages for quick, personal communication. Perfect for detailed explanations or when you're on the go.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> High-quality audio</li>
+                            <li><i class="fas fa-check"></i> Playback controls</li>
+                            <li><i class="fas fa-check"></i> Voice-to-text option</li>
+                            <li><i class="fas fa-check"></i> Background noise reduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Photo Uploads -->
+            <div class="journey-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <div class="step-text">
+                        <h3>Photo & Image Sharing</h3>
+                        <p>Let customers show you exactly what they want before they arrive. Share inspiration photos, before/after shots, and style references.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> High-resolution images</li>
+                            <li><i class="fas fa-check"></i> Multiple photo uploads</li>
+                            <li><i class="fas fa-check"></i> Image gallery view</li>
+                            <li><i class="fas fa-check"></i> Screenshot sharing</li>
+                        </ul>
+                    </div>
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <h4>Visual Communication</h4>
+                            <p>See exactly what your clients envision</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Customer Insights -->
+            <div class="journey-step reverse">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <div class="step-visual">
+                        <div class="feature-card large">
+                            <div class="customer-profile">
+                                <div class="profile-header">
+                                    <div class="profile-avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="profile-info">
+                                        <h4>Sarah Johnson</h4>
+                                        <span class="customer-since">Customer since 2022</span>
+                                    </div>
+                                </div>
+                                <div class="profile-details">
+                                    <div class="detail-item">
+                                        <span class="label">Email:</span>
+                                        <span class="value">sarah.j@email.com</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Phone:</span>
+                                        <span class="value">+44 7911 123456</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Birthday:</span>
+                                        <span class="value">March 15th</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Total Visits:</span>
+                                        <span class="value">24</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Last Visit:</span>
+                                        <span class="value">2 weeks ago</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Favorite Service:</span>
+                                        <span class="value">Haircut & Style</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <h3>Complete Customer Intelligence</h3>
+                        <p>Access comprehensive customer profiles with booking history, preferences, and personal details - all in one place.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> Full customer profiles</li>
+                            <li><i class="fas fa-check"></i> Booking history</li>
+                            <li><i class="fas fa-check"></i> Service preferences</li>
+                            <li><i class="fas fa-check"></i> Personal details</li>
+                            <li><i class="fas fa-check"></i> Communication history</li>
+                            <li><i class="fas fa-check"></i> Birthday reminders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="chat-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need for Perfect Communication</h2>
+                <p>Powerful features that make every conversation count</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Chat from anywhere with our responsive mobile app. Full functionality on iOS and Android.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Notifications</h3>
+                    <p>Never miss an important message with intelligent push notifications and email alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Message Search</h3>
+                    <p>Find any conversation or message instantly with powerful search functionality.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>End-to-end encryption ensures all conversations remain private and secure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24/7 Availability</h3>
+                    <p>Your chat system works around the clock, even when you're not in the salon.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Communication Analytics</h3>
+                    <p>Track response times, customer satisfaction, and communication patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Reminder -->
+    <section class="pricing-reminder">
+        <div class="container">
+            <div class="reminder-content">
+                <div class="reminder-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h2>Included in Every Plan</h2>
+                <p>Our revolutionary chat system comes standard with all Salon Suite plans. No additional cost, no hidden fees.</p>
+                <div class="plan-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check"></i>
+                        <span>Starter Plan - £27/month</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check"></i>
+                        <span>Standard Plan - £75/month</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check"></i>
+                        <span>Enterprise Plan - £147/month</span>
+                    </div>
+                </div>
+                <button class="cta-primary large">
+                    <span>Start Your Free Trial</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="simple-chat.js"></script>
+</body>
+</html>

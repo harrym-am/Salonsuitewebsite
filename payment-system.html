@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment System - Salon Suite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payment-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Salon Suite</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Seamless</span>
+                        <span class="title-highlight">Payment Processing</span>
+                    </h1>
+                    <p class="hero-description">
+                        Accept payments instantly with our integrated payment system. Partnered with industry leaders Stripe and Square for secure, reliable transactions that keep your business moving.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="cta-primary">
+                            Start Free Trial
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Bank-level security - PCI compliant</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="payment-demo">
+                        <div class="payment-header">
+                            <div class="payment-info">
+                                <h3>Payment Confirmation</h3>
+                                <span class="payment-status">Processing...</span>
+                            </div>
+                        </div>
+                        <div class="payment-content" id="payment-content">
+                            <!-- Payment animation will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Partners Section -->
+    <section class="payment-partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted Payment Partners</h2>
+                <p>Integrated with the world's most reliable payment processors</p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fab fa-stripe"></i>
+                    </div>
+                    <h3>Stripe</h3>
+                    <p>Global payment processing with support for 135+ currencies and payment methods worldwide.</p>
+                    <ul class="partner-features">
+                        <li><i class="fas fa-check"></i> Credit & debit cards</li>
+                        <li><i class="fas fa-check"></i> Digital wallets (Apple Pay, Google Pay)</li>
+                        <li><i class="fas fa-check"></i> International payments</li>
+                        <li><i class="fas fa-check"></i> Advanced fraud protection</li>
+                    </ul>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <i class="fas fa-square"></i>
+                    </div>
+                    <h3>Square</h3>
+                    <p>Complete business solutions with integrated point-of-sale and payment processing.</p>
+                    <ul class="partner-features">
+                        <li><i class="fas fa-check"></i> In-person & online payments</li>
+                        <li><i class="fas fa-check"></i> Square Terminal integration</li>
+                        <li><i class="fas fa-check"></i> Business banking services</li>
+                        <li><i class="fas fa-check"></i> Real-time reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Journey Section -->
+    <section class="payment-journey">
+        <div class="container">
+            <div class="journey-header">
+                <h2>Your Payment Processing Journey</h2>
+                <p>From booking to payment - seamless and secure every step</p>
+            </div>
+            
+            <!-- Step 1: Booking -->
+            <div class="journey-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <div class="step-text">
+                        <h3>Client Books Appointment</h3>
+                        <p>Customer selects services and time slot through your booking system. Payment information is collected securely during the booking process.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> Secure payment forms</li>
+                            <li><i class="fas fa-check"></i> Multiple payment options</li>
+                            <li><i class="fas fa-check"></i> Automatic validation</li>
+                            <li><i class="fas fa-check"></i> Booking confirmation</li>
+                        </ul>
+                    </div>
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4>Easy Booking</h4>
+                            <p>Secure payment collection during booking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Processing -->
+            <div class="journey-step reverse">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <h4>Instant Processing</h4>
+                            <p>Real-time payment verification</p>
+                        </div>
+                    </div>
+                    <div class="step-text">
+                        <h3>Instant Payment Processing</h3>
+                        <p>Payments are processed instantly through our secure gateway. Real-time verification ensures transactions are completed successfully.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> Real-time processing</li>
+                            <li><i class="fas fa-check"></i> Fraud detection</li>
+                            <li><i class="fas fa-check"></i> Payment verification</li>
+                            <li><i class="fas fa-check"></i> Instant confirmation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="journey-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <div class="step-text">
+                        <h3>Payment Confirmation</h3>
+                        <p>Both you and your client receive instant confirmation. Payment details are automatically recorded in your system.</p>
+                        <ul class="step-features">
+                            <li><i class="fas fa-check"></i> Instant notifications</li>
+                            <li><i class="fas fa-check"></i> Receipt generation</li>
+                            <li><i class="fas fa-check"></i> Booking confirmation</li>
+                            <li><i class="fas fa-check"></i> Payment history</li>
+                        </ul>
+                    </div>
+                    <div class="step-visual">
+                        <div class="feature-card">
+                            <div class="card-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h4>Payment Confirmed</h4>
+                            <p>Instant confirmation for both parties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Features Section -->
+    <section class="payment-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Payment Features</h2>
+                <p>Everything you need for seamless payment processing</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile Payments</h4>
+                    <p>Accept payments anywhere with mobile card readers and digital wallets</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h4>Automated Invoicing</h4>
+                    <p>Generate and send professional invoices automatically</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Payment Analytics</h4>
+                    <p>Track payment trends and revenue insights in real-time</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Fraud Protection</h4>
+                    <p>Advanced security measures to protect your business</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4>Recurring Payments</h4>
+                    <p>Set up automatic recurring payments for memberships</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Multi-Currency</h4>
+                    <p>Accept payments in multiple currencies worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security-section">
+        <div class="container">
+            <div class="security-content">
+                <div class="security-text">
+                    <h2>Bank-Level Security</h2>
+                    <p>Your payments are protected with enterprise-grade security measures that meet the highest industry standards.</p>
+                    <ul class="security-features">
+                        <li><i class="fas fa-lock"></i> PCI DSS Level 1 Compliance</li>
+                        <li><i class="fas fa-encryption"></i> End-to-end encryption</li>
+                        <li><i class="fas fa-shield-alt"></i> Fraud detection & prevention</li>
+                        <li><i class="fas fa-user-shield"></i> Secure customer data handling</li>
+                    </ul>
+                </div>
+                <div class="security-visual">
+                    <div class="security-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>PCI Compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Payment Processing?</h2>
+                <p>Join thousands of salons already using our integrated payment system</p>
+                <div class="cta-actions">
+                    <button class="cta-primary large">
+                        Start Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="payment-script.js"></script>
+</body>
+</html>

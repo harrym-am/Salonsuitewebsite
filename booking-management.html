@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Booking Management - Salon Suite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Salon Suite</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="cta-primary">Start Free Trial</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Smart Booking</span>
+                        <span class="title-highlight">Management</span>
+                    </h1>
+                    <p class="hero-description">
+                        Never lose another booking with our intelligent calendar system. Automated reminders, intelligent staff scheduling, and real-time availability updates keep your salon running smoothly.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="cta-primary">
+                            Start Free Trial
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>99.9% booking accuracy guarantee</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="booking-demo">
+                        <div class="demo-container">
+                            <div class="demo-screen" id="demo-screen">
+                                <!-- Booking animation will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Features Section -->
+    <section class="booking-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligent Booking System</h2>
+                <p>Everything you need to manage appointments seamlessly</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>Automated Reminders</h4>
+                    <p>Send SMS, email, and push notifications automatically to reduce no-shows by up to 80%</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h4>Intelligent Staff Scheduling</h4>
+                    <p>AI-powered scheduling that matches the right stylist with the right client and service</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4>Real-time Availability</h4>
+                    <p>Live calendar updates across all platforms prevent double bookings and conflicts</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Conflict Detection</h4>
+                    <p>Advanced algorithms detect and resolve scheduling conflicts before they become problems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Journey Section -->
+    <section class="booking-journey">
+        <div class="container">
+            <div class="journey-header">
+                <h2>Your Booking Management Journey</h2>
+                <p>From appointment creation to completion - seamlessly automated</p>
+            </div>
+            
+            <div class="journey-steps">
+                <!-- Step 1: Smart Scheduling -->
+                <div class="journey-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <h3>Intelligent Appointment Booking</h3>
+                            <p>Our AI analyzes staff availability, service duration, and client preferences to suggest optimal appointment times. No more manual scheduling conflicts or inefficient time slots.</p>
+                            <ul class="step-features">
+                                <li><i class="fas fa-check"></i> AI-powered time slot suggestions</li>
+                                <li><i class="fas fa-check"></i> Staff skill matching</li>
+                                <li><i class="fas fa-check"></i> Service duration optimization</li>
+                                <li><i class="fas fa-check"></i> Client preference tracking</li>
+                            </ul>
+                        </div>
+                        <div class="step-visual">
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>Smart Scheduling</h4>
+                                <p>AI matches clients with perfect time slots</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Automated Reminders -->
+                <div class="journey-step reverse">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-visual">
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <h4>Auto Reminders</h4>
+                                <p>Multi-channel notification system</p>
+                            </div>
+                        </div>
+                        <div class="step-text">
+                            <h3>Automated Reminder System</h3>
+                            <p>Reduce no-shows with intelligent reminders sent via SMS, email, and push notifications. Customizable timing and messaging for different service types.</p>
+                            <ul class="step-features">
+                                <li><i class="fas fa-check"></i> Multi-channel notifications</li>
+                                <li><i class="fas fa-check"></i> Customizable reminder timing</li>
+                                <li><i class="fas fa-check"></i> Personalized messaging</li>
+                                <li><i class="fas fa-check"></i> Confirmation tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Real-time Updates -->
+                <div class="journey-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <h3>Real-time Calendar Sync</h3>
+                            <p>Live updates across all platforms ensure everyone stays in sync. Staff, clients, and management always have the latest schedule information.</p>
+                            <ul class="step-features">
+                                <li><i class="fas fa-check"></i> Instant calendar updates</li>
+                                <li><i class="fas fa-check"></i> Multi-platform synchronization</li>
+                                <li><i class="fas fa-check"></i> Conflict prevention</li>
+                                <li><i class="fas fa-check"></i> Live availability display</li>
+                            </ul>
+                        </div>
+                        <div class="step-visual">
+                            <div class="feature-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <h4>Live Sync</h4>
+                                <p>Real-time updates across all devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Benefits Section -->
+    <section class="booking-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Smart Booking?</h2>
+                <p>Built specifically for salon owners who value efficiency</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>80% Fewer No-Shows</h4>
+                    <p>Automated reminders and confirmations dramatically reduce missed appointments</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Save 2 Hours Daily</h4>
+                    <p>Automated scheduling and management frees up time for what matters most</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>24/7 Online Booking</h4>
+                    <p>Clients can book appointments anytime, anywhere, even when you're closed</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h4>99.9% Accuracy</h4>
+                    <p>Advanced conflict detection ensures scheduling errors are virtually eliminated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="booking-integrations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seamless Integrations</h2>
+                <p>Works with your existing tools and platforms</p>
+            </div>
+            <div class="integrations-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h4>Google Calendar</h4>
+                    <p>Two-way sync with Google Calendar</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h4>Apple Calendar</h4>
+                    <p>Native iOS calendar integration</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Systems</h4>
+                    <p>Gmail, Outlook, and more</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-sms"></i>
+                    </div>
+                    <h4>SMS Providers</h4>
+                    <p>Twilio, MessageBird integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Booking System?</h2>
+                <p>Join thousands of salons using smart booking management to grow their business</p>
+                <div class="cta-buttons">
+                    <button class="cta-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Trial
+                    </button>
+                </div>
+                <p class="cta-note">No credit card required • 30-day free trial • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="booking-script.js"></script>
+</body>
+</html>

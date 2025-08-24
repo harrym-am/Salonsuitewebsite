@@ -1,0 +1,649 @@
+/* Payment System Page Styles */
+
+:root {
+    --primary-color: #ec4899;
+    --secondary-color: #f472b6;
+    --accent-color: #f97316;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fdf2f8;
+    --border-color: #f3e8ff;
+    --shadow-sm: 0 1px 2px rgba(236, 72, 153, 0.05);
+    --shadow-md: 0 4px 6px rgba(236, 72, 153, 0.1);
+    --shadow-lg: 0 10px 15px rgba(236, 72, 153, 0.1);
+    --shadow-xl: 0 20px 25px rgba(236, 72, 153, 0.15);
+    --gradient-primary: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+    --gradient-secondary: linear-gradient(135deg, #f472b6 0%, #f97316 100%);
+    --gradient-glossy: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #f97316 100%);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+    padding: 8rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ec4899" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="%23ec4899" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23ec4899" opacity="0.1"/></svg>');
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.title-line {
+    display: block;
+    color: var(--text-primary);
+}
+
+.title-highlight {
+    display: block;
+    background: var(--gradient-glossy);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-glossy);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    max-width: fit-content;
+    box-shadow: var(--shadow-md);
+}
+
+.hero-badge i {
+    font-size: 1rem;
+}
+
+/* Payment Demo */
+.payment-demo {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    max-width: 550px;
+    margin: 0 auto;
+    position: relative;
+    pointer-events: none;
+    user-select: none;
+}
+
+.payment-demo:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+}
+
+.payment-header {
+    background: var(--gradient-glossy);
+    padding: 1.5rem 2rem;
+    color: white;
+    text-align: center;
+    min-width: 100%;
+}
+
+.payment-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.payment-status {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    width: 100%;
+}
+
+.payment-content {
+    padding: 2rem;
+    background: #f8fafc;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Payment Partners Section */
+.payment-partners {
+    padding: 6rem 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.partner-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.partner-logo {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-glossy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.partner-card h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.partner-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.partner-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.partner-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.partner-features i {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Payment Journey Section */
+.payment-journey {
+    padding: 6rem 0;
+    background: var(--bg-secondary);
+}
+
+.journey-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.journey-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.journey-header p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.journey-step {
+    margin-bottom: 6rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.journey-step:last-child {
+    margin-bottom: 4rem;
+}
+
+.journey-step.reverse .step-content {
+    grid-template-columns: 1fr 1fr;
+}
+
+.journey-step.reverse .step-text {
+    order: 2;
+}
+
+.journey-step.reverse .step-visual {
+    order: 1;
+}
+
+.journey-step.reverse .step-number {
+    left: auto;
+    right: -1rem;
+}
+
+.step-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    z-index: 0;
+}
+
+.step-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.step-text h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.step-text p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.step-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.step-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.step-features i {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.step-visual {
+    display: flex;
+    justify-content: center;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    max-width: 350px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-glossy);
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.3);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--gradient-glossy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.feature-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Payment Features Section */
+.payment-features {
+    padding: 6rem 0;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Security Section */
+.security-section {
+    padding: 6rem 0;
+    background: var(--bg-secondary);
+}
+
+.security-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.security-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.security-text p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.security-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.security-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+}
+
+.security-features i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    width: 24px;
+}
+
+.security-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.security-badge {
+    background: var(--gradient-glossy);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+    transform: rotate(5deg);
+}
+
+.security-badge i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.security-badge span {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 6rem 0;
+    background: white;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.cta-content p {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .journey-step {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .security-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .journey-step {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 6rem 0 4rem;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .partners-grid {
+        padding: 0 1rem;
+    }
+    
+    .payment-partners,
+    .payment-journey,
+    .payment-features,
+    .security-section,
+    .cta-section {
+        padding: 4rem 0;
+    }
+}
