@@ -66,6 +66,12 @@ html {
     background-clip: text;
 }
 
+.nav-logo .logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
