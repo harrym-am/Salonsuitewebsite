@@ -806,3 +806,318 @@
         gap: 1.5rem;
     }
 }
+
+/* Comprehensive Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+    /* Reset all 3D transforms and perspective effects on mobile */
+    .mobile-demo,
+    .demo-phone,
+    .demo-phone-frame {
+        transform: none !important;
+        perspective: none !important;
+        transform-style: flat !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Remove hover effects that cause issues on mobile */
+    .mobile-demo:hover,
+    .demo-phone:hover,
+    .demo-phone-frame:hover {
+        transform: none !important;
+    }
+    
+    /* Scale down demo elements to fit mobile screens */
+    .mobile-demo {
+        height: 320px !important;
+        margin: 0 auto !important;
+    }
+    
+    .demo-phone {
+        height: 300px !important;
+    }
+    
+    .demo-phone-frame {
+        width: 200px !important;
+        height: 400px !important;
+        margin: 0 auto !important;
+    }
+    
+    .demo-phone-screen {
+        border-radius: 20px !important;
+    }
+    
+    /* Adjust demo content for mobile */
+    .demo-app-logo {
+        width: 70px !important;
+        height: 70px !important;
+        font-size: 1.8rem !important;
+    }
+    
+    .demo-login-logo {
+        font-size: 2.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .demo-role-cards {
+        gap: 1.5rem !important;
+        max-width: 180px !important;
+    }
+    
+    .demo-role-card {
+        padding: 1rem !important;
+    }
+    
+    .demo-role-icon {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .demo-role-title {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .hero-actions {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Feature cards mobile adjustments */
+    .feature-card {
+        padding: 1.5rem !important;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Journey steps mobile adjustments */
+    .journey-step {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .step-text h3 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .step-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Benefits grid mobile adjustments */
+    .benefits-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .benefit-card {
+        padding: 1.5rem !important;
+    }
+    
+    .benefit-card h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .benefit-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* CTA section mobile adjustments */
+    .cta-content h2 {
+        font-size: 2rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 1rem !important;
+    }
+    
+    .cta-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .cta-buttons .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 0 !important;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+    
+    .mobile-demo {
+        height: 280px !important;
+    }
+    
+    .demo-phone {
+        height: 260px !important;
+    }
+    
+    .demo-phone-frame {
+        width: 180px !important;
+        height: 360px !important;
+    }
+    
+    .demo-app-logo {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.6rem !important;
+    }
+    
+    .demo-login-logo {
+        font-size: 2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .demo-role-cards {
+        gap: 1.25rem !important;
+        max-width: 160px !important;
+    }
+    
+    .demo-role-card {
+        padding: 0.875rem !important;
+    }
+    
+    .demo-role-icon {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1rem !important;
+    }
+    
+    .demo-role-title {
+        font-size: 0.8rem !important;
+    }
+    
+    .step-text h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .step-text p {
+        font-size: 0.9rem !important;
+    }
+    
+    .feature-card {
+        padding: 1.25rem !important;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .benefit-card {
+        padding: 1.25rem !important;
+    }
+    
+    .benefit-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    .benefit-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .cta-primary:hover,
+    .feature-card:hover,
+    .benefit-card:hover,
+    .mobile-demo:hover,
+    .demo-phone:hover {
+        transform: none !important;
+    }
+    
+    .cta-primary,
+    .feature-card,
+    .benefit-card {
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    .feature-card,
+    .benefit-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .container {
+        overflow-x: hidden !important;
+    }
+    
+    /* Optimize form elements */
+    input,
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 12px !important;
+    }
+}

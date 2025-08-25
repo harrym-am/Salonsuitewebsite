@@ -705,3 +705,301 @@
         padding: 4rem 0;
     }
 }
+
+/* Comprehensive Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+    /* Reset all 3D transforms and perspective effects on mobile */
+    .revenue-demo,
+    .demo-revenue,
+    .demo-revenue-content {
+        transform: none !important;
+        perspective: none !important;
+        transform-style: flat !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Remove hover effects that cause issues on mobile */
+    .revenue-demo:hover,
+    .demo-revenue:hover {
+        transform: none !important;
+    }
+    
+    /* Scale down demo elements to fit mobile screens */
+    .revenue-demo {
+        height: 300px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Mobile-specific demo sizing */
+    .demo-revenue {
+        height: 280px !important;
+    }
+    
+    /* Adjust demo content for mobile */
+    .demo-revenue-header {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .demo-revenue-header h3 {
+        font-size: 1rem !important;
+    }
+    
+    .demo-revenue-balance {
+        font-size: 1rem !important;
+    }
+    
+    .demo-revenue-transactions {
+        gap: 0.5rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    .demo-transaction {
+        padding: 0.5rem !important;
+    }
+    
+    .demo-transaction-description {
+        font-size: 0.75rem !important;
+    }
+    
+    .demo-transaction-time {
+        font-size: 0.65rem !important;
+    }
+    
+    .demo-transaction-amount {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .hero-actions {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+    
+    /* Feature cards mobile adjustments */
+    .feature-card {
+        padding: 1.5rem !important;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Journey steps mobile adjustments */
+    .journey-step {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .step-text h3 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .step-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Metrics grid mobile adjustments */
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .metric-card {
+        padding: 1.5rem !important;
+    }
+    
+    .metric-card h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .metric-card p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Report section mobile adjustments */
+    .report-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .report-text h3 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .report-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* CTA section mobile adjustments */
+    .cta-content h2 {
+        font-size: 2rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 1rem !important;
+    }
+    
+    .cta-actions {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .cta-actions .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 0 !important;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+    
+    .revenue-demo {
+        height: 250px !important;
+    }
+    
+    .demo-revenue {
+        height: 240px !important;
+    }
+    
+    .step-text h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .step-text p {
+        font-size: 0.9rem !important;
+    }
+    
+    .feature-card {
+        padding: 1.25rem !important;
+    }
+    
+    .feature-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    .feature-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .metric-card {
+        padding: 1.25rem !important;
+    }
+    
+    .metric-card h4 {
+        font-size: 1.1rem !important;
+    }
+    
+    .metric-card p {
+        font-size: 0.85rem !important;
+    }
+    
+    .report-text h3 {
+        font-size: 1.6rem !important;
+    }
+    
+    .report-text p {
+        font-size: 0.9rem !important;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .cta-primary:hover,
+    .feature-card:hover,
+    .metric-card:hover,
+    .revenue-demo:hover {
+        transform: none !important;
+    }
+    
+    .cta-primary,
+    .feature-card,
+    .metric-card {
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    .feature-card,
+    .metric-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .container {
+        overflow-x: hidden !important;
+    }
+    
+    /* Optimize form elements */
+    input,
+    textarea,
+    select {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 12px !important;
+    }
+}
