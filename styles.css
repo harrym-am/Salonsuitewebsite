@@ -3617,60 +3617,34 @@ html {
         line-height: 1.4;
     }
     
-    /* Visual Elements - Mobile scaling reduced by additional 30% */
+    /* Visual Elements - Hidden on mobile for cleaner experience */
     .hero-visual {
-        transform: scale(0.49); /* 0.7 * 0.7 = 0.49 (30% reduction) */
-        transform-origin: center top;
-        margin-top: 1rem;
-        max-width: 100%;
-        overflow: visible; /* Allow full motion to be visible */
+        display: none !important;
     }
     
     .floating-shapes {
-        transform: scale(0.49); /* 0.7 * 0.7 = 0.49 (30% reduction) */
-        transform-origin: center;
-        overflow: visible; /* Allow full motion to be visible */
+        display: none !important;
     }
     
-    /* Dashboard Preview - Mobile optimized with 30% size reduction */
+    /* Dashboard Preview - Hidden on mobile for cleaner experience */
     .dashboard-preview {
-        width: 100% !important;
-        max-width: 224px !important; /* 320px * 0.7 = 224px (30% reduction) */
-        height: 168px !important; /* 240px * 0.7 = 168px (30% reduction) */
-        transform: none !important;
-        margin: 0 auto !important;
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
-    .dashboard-content {
-        padding: 0.6rem !important; /* Reduced padding for smaller containers */
-    }
-    
-    .widget {
-        margin-bottom: 0.6rem !important; /* Reduced margin for smaller containers */
-    }
-    
-    .widget-header h3 {
-        font-size: 0.7rem !important; /* Smaller font for better fit */
-    }
-    
+    /* Dashboard content - Hidden on mobile for cleaner experience */
+    .dashboard-content,
+    .widget,
+    .widget-header,
     .widget-badge {
-        font-size: 0.6rem !important; /* Smaller font for better fit */
-        padding: 0.15rem 0.4rem !important; /* Reduced padding */
+        display: none !important;
     }
     
-    /* Feature Demo - Mobile optimized with 30% size reduction */
+    /* Feature Demo - Hidden on mobile for cleaner experience */
     .feature-demo {
-        width: 100% !important;
-        max-width: 224px !important; /* 320px * 0.7 = 224px (30% reduction) */
-        height: 168px !important; /* 240px * 0.7 = 168px (30% reduction) */
-        transform: none !important;
-        margin: 0 auto !important;
-        border-radius: 12px !important;
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
-    /* Demo content scaling - adjusted for 30% size reduction */
+    /* Demo content - Hidden on mobile for cleaner experience */
     .demo-calendar,
     .demo-time-slots,
     .demo-appointments,
@@ -3681,9 +3655,7 @@ html {
     .demo-loading-screen,
     .demo-analytics-screen,
     .demo-login-screen {
-        padding: 0.6rem !important; /* Reduced padding for smaller containers */
-        font-size: 0.7rem !important; /* Smaller font for better fit */
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
     .demo-calendar-grid {
@@ -3883,37 +3855,22 @@ html {
         transform: none !important;
     }
     
-    /* Mobile-specific demo sizing - 30% size reduction for better mobile fit */
+    /* Mobile-specific demo sizing - Hidden on mobile for cleaner experience */
     #booking-demo,
     #chat-demo,
     #payment-demo,
     #revenue-demo,
     #merge-demo {
-        width: 100% !important;
-        max-width: 224px !important; /* 320px * 0.7 = 224px (30% reduction) */
-        height: 168px !important; /* 240px * 0.7 = 168px (30% reduction) */
-        margin: 0 auto !important;
-        display: block !important;
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
-    /* Mobile demo specific - 30% size reduction for phone frame */
+    /* Mobile demo specific - Hidden on mobile for cleaner experience */
     #mobile-demo {
-        width: 100% !important;
-        max-width: 196px !important; /* 280px * 0.7 = 196px (30% reduction) */
-        height: 196px !important; /* 280px * 0.7 = 196px (30% reduction) */
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
     .demo-phone-frame {
-        width: 112px !important; /* 160px * 0.7 = 112px (30% reduction) */
-        height: 224px !important; /* 320px * 0.7 = 224px (30% reduction) */
-        transform: none !important;
-        margin: 0 auto !important;
-        overflow: visible !important; /* Allow full motion to be visible */
+        display: none !important;
     }
     
     .demo-phone-screen {
@@ -3935,19 +3892,11 @@ html {
         font-size: 0.8rem !important;
     }
     
-    /* Scale down demo elements - adjusted for 30% size reduction */
-    .demo-calendar-grid {
-        gap: 0.08rem !important; /* Reduced gap for smaller containers */
-    }
-    
-    .demo-day {
-        font-size: 0.5rem !important; /* Smaller font for better fit */
-        padding: 0.15rem !important; /* Reduced padding */
-    }
-    
+    /* Demo elements - Hidden on mobile for cleaner experience */
+    .demo-calendar-grid,
+    .demo-day,
     .demo-time-slot {
-        padding: 0.25rem !important; /* Reduced padding */
-        font-size: 0.6rem !important; /* Smaller font for better fit */
+        display: none !important;
     }
     
     .demo-appointment {
