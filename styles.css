@@ -3726,9 +3726,130 @@ html {
     .hero-content,
     .feature-card,
     .pricing-card,
-    .feature-text {
+    .feature-text,
+    .hero-title,
+    .hero-subtitle,
+    .section-header h2,
+    .section-header p,
+    .feature-text h3,
+    .feature-text p,
+    .faq-question h3,
+    .faq-answer p {
         word-wrap: break-word;
         overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Ambassador page specific mobile fixes */
+    .hero-title .title-line {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .stat-item {
+        text-align: center !important;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .features-section .section-header h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .features-section .section-header p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .feature-showcase .feature-text h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .feature-showcase .feature-text p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .faq-section .section-header h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .faq-section .section-header p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .faq-answer p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Fix layout issues for ambassador page */
+    .hero-container {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .feature-showcase .feature-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .feature-showcase.reverse .feature-content {
+        direction: ltr !important;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .faq-container {
+        gap: 1rem !important;
+    }
+    
+    /* Fix button sizing for ambassador page */
+    .hero-cta .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .feature-actions .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
     }
 }
 
