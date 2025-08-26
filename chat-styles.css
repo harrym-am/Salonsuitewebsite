@@ -1258,54 +1258,19 @@
 
 /* Comprehensive Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-    /* Reset all 3D transforms and perspective effects on mobile */
+    /* Hide graphics on mobile for cleaner experience */
     .chat-preview,
     .demo-chat,
     .chat-demo {
-        transform: none !important;
-        perspective: none !important;
-        transform-style: flat !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        display: none !important;
     }
     
-    /* Remove hover effects that cause issues on mobile */
-    .chat-preview:hover,
-    .demo-chat:hover {
-        transform: none !important;
-    }
-    
-    /* Scale down demo elements to fit mobile screens */
-    .chat-demo {
-        height: 300px !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Mobile-specific demo sizing */
-    .demo-chat {
-        height: 280px !important;
-    }
-    
-    /* Adjust demo content for mobile */
-    .demo-chat-messages {
-        height: 180px !important;
-        padding: 0.75rem !important;
-    }
-    
-    .demo-message-bubble {
-        font-size: 0.8rem !important;
-        padding: 0.5rem 0.75rem !important;
-        max-width: 85% !important;
-    }
-    
-    .demo-chat-header {
-        padding: 0.75rem !important;
-    }
-    
+    /* Hide demo content on mobile */
+    .demo-chat-messages,
+    .demo-message-bubble,
+    .demo-chat-header,
     .demo-chat-avatar {
-        width: 32px !important;
-        height: 32px !important;
-        font-size: 0.8rem !important;
+        display: none !important;
     }
     
     .demo-chat-name {

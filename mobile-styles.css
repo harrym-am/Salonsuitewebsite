@@ -809,73 +809,22 @@
 
 /* Comprehensive Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-    /* Reset all 3D transforms and perspective effects on mobile */
+    /* Hide graphics on mobile for cleaner experience */
     .mobile-demo,
     .demo-phone,
     .demo-phone-frame {
-        transform: none !important;
-        perspective: none !important;
-        transform-style: flat !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        display: none !important;
     }
     
-    /* Remove hover effects that cause issues on mobile */
-    .mobile-demo:hover,
-    .demo-phone:hover,
-    .demo-phone-frame:hover {
-        transform: none !important;
-    }
-    
-    /* Scale down demo elements to fit mobile screens */
-    .mobile-demo {
-        height: 320px !important;
-        margin: 0 auto !important;
-    }
-    
-    .demo-phone {
-        height: 300px !important;
-    }
-    
-    .demo-phone-frame {
-        width: 200px !important;
-        height: 400px !important;
-        margin: 0 auto !important;
-    }
-    
-    .demo-phone-screen {
-        border-radius: 20px !important;
-    }
-    
-    /* Adjust demo content for mobile */
-    .demo-app-logo {
-        width: 70px !important;
-        height: 70px !important;
-        font-size: 1.8rem !important;
-    }
-    
-    .demo-login-logo {
-        font-size: 2.5rem !important;
-        margin-bottom: 2rem !important;
-    }
-    
-    .demo-role-cards {
-        gap: 1.5rem !important;
-        max-width: 180px !important;
-    }
-    
-    .demo-role-card {
-        padding: 1rem !important;
-    }
-    
-    .demo-role-icon {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 1.1rem !important;
-    }
-    
+    /* Hide demo content on mobile */
+    .demo-phone-screen,
+    .demo-app-logo,
+    .demo-login-logo,
+    .demo-role-cards,
+    .demo-role-card,
+    .demo-role-icon,
     .demo-role-title {
-        font-size: 0.85rem !important;
+        display: none !important;
     }
     
     /* Hero section mobile adjustments */

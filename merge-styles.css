@@ -825,76 +825,27 @@
 
 /* Comprehensive Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-    /* Reset all 3D transforms and perspective effects on mobile */
+    /* Hide graphics on mobile for cleaner experience */
     .merge-demo,
     .demo-upload-screen,
     .demo-loading-screen,
     .demo-analytics-screen {
-        transform: none !important;
-        perspective: none !important;
-        transform-style: flat !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        display: none !important;
     }
     
-    /* Remove hover effects that cause issues on mobile */
-    .merge-demo:hover {
-        transform: none !important;
-    }
-    
-    /* Scale down demo elements to fit mobile screens */
-    .merge-demo {
-        height: 300px !important;
-        margin: 0 auto !important;
-    }
-    
-    .demo-container {
-        width: 100% !important;
-        height: 280px !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Adjust demo content for mobile */
-    .demo-upload-area {
-        padding: 1.5rem !important;
-    }
-    
-    .demo-upload-icon {
-        font-size: 2.5rem !important;
-    }
-    
-    .demo-upload-text {
-        font-size: 1rem !important;
-    }
-    
-    .demo-upload-subtext {
-        font-size: 0.8rem !important;
-    }
-    
-    .demo-loading-text {
-        font-size: 1rem !important;
-    }
-    
-    .demo-analytics-title {
-        font-size: 1.1rem !important;
-    }
-    
-    .demo-analytics-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.75rem !important;
-    }
-    
-    .demo-analytics-item {
-        padding: 0.75rem !important;
-    }
-    
-    .demo-analytics-number {
-        font-size: 1.2rem !important;
-    }
-    
+    /* Hide demo content on mobile */
+    .demo-container,
+    .demo-upload-area,
+    .demo-upload-icon,
+    .demo-upload-text,
+    .demo-upload-subtext,
+    .demo-loading-text,
+    .demo-analytics-title,
+    .demo-analytics-grid,
+    .demo-analytics-item,
+    .demo-analytics-number,
     .demo-analytics-label {
-        font-size: 0.7rem !important;
+        display: none !important;
     }
     
     /* Hero section mobile adjustments */

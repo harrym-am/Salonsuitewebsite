@@ -775,16 +775,13 @@
         padding: 0.6rem 1.2rem;
     }
     
+    /* Hide graphics on mobile for cleaner experience */
     .demo-container {
-        width: 100% !important;
-        height: 280px !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
+        display: none !important;
     }
     
     .booking-demo {
-        transform: none !important;
-        perspective: none !important;
+        display: none !important;
     }
     
     .step-content {

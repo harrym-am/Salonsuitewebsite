@@ -650,59 +650,21 @@
 
 /* Comprehensive Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-    /* Reset all 3D transforms and perspective effects on mobile */
+    /* Hide graphics on mobile for cleaner experience */
     .payment-demo,
     .demo-payment,
     .demo-payment-content {
-        transform: none !important;
-        perspective: none !important;
-        transform-style: flat !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        display: none !important;
     }
     
-    /* Remove hover effects that cause issues on mobile */
-    .payment-demo:hover,
-    .demo-payment:hover {
-        transform: none !important;
-    }
-    
-    /* Scale down demo elements to fit mobile screens */
-    .payment-demo {
-        height: 300px !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Mobile-specific demo sizing */
-    .demo-payment {
-        height: 280px !important;
-    }
-    
-    /* Adjust demo content for mobile */
-    .demo-payment-form {
-        padding: 1rem !important;
-    }
-    
-    .demo-payment-amount {
-        padding: 0.75rem !important;
-    }
-    
-    .demo-amount {
-        font-size: 1rem !important;
-    }
-    
-    .demo-service-item {
-        font-size: 0.85rem !important;
-        padding: 0.3rem 0 !important;
-    }
-    
-    .demo-card-preview {
-        padding: 0.75rem !important;
-    }
-    
+    /* Hide demo content on mobile */
+    .demo-payment-form,
+    .demo-payment-amount,
+    .demo-amount,
+    .demo-service-item,
+    .demo-card-preview,
     .demo-pay-btn {
-        padding: 0.6rem 1.2rem !important;
-        font-size: 0.95rem !important;
+        display: none !important;
     }
     
     /* Hero section mobile adjustments */
