@@ -1348,22 +1348,41 @@
     
     /* Journey steps mobile adjustments */
     .journey-step {
-        flex-direction: column !important;
-        gap: 1.5rem !important;
+        margin-bottom: 3rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    .journey-step .step-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
         text-align: center !important;
     }
     
-    .journey-step.reverse {
-        flex-direction: column !important;
+    .journey-step.reverse .step-content {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .journey-step.reverse .step-text {
+        order: 1 !important;
+    }
+    
+    .journey-step.reverse .step-visual {
+        order: 2 !important;
     }
     
     .step-number {
-        position: relative !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
+        font-size: 2.5rem !important;
+        top: -1rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+        position: absolute !important;
+    }
+    
+    .journey-step.reverse .step-number {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
     }
     
     .step-text h3 {

@@ -893,9 +893,40 @@
     
     /* Journey steps mobile adjustments */
     .journey-step {
+        margin-bottom: 3rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    .journey-step .step-content {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
         text-align: center !important;
+    }
+    
+    .journey-step.reverse .step-content {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .journey-step.reverse .step-text {
+        order: 1 !important;
+    }
+    
+    .journey-step.reverse .step-visual {
+        order: 2 !important;
+    }
+    
+    .step-number {
+        font-size: 2.5rem !important;
+        top: -1rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+    }
+    
+    .journey-step.reverse .step-number {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
     }
     
     .step-text h3 {
