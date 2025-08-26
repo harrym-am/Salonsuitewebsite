@@ -3498,7 +3498,7 @@ html {
     }
 }
 
-/* Simple Mobile Scaling - 60% scale down */
+/* Mobile Responsive Design - Comprehensive Fix */
 @media (max-width: 768px) {
     /* Navigation */
     .hamburger {
@@ -3547,75 +3547,160 @@ html {
         font-weight: 600;
     }
     
-    /* Scale everything down by 60% */
+    /* Hero Section - Proper mobile sizing */
     .hero-content h1 {
-        font-size: 2.1rem; /* 60% of 3.5rem */
+        font-size: 2rem;
+        line-height: 1.2;
     }
     
     .hero-content p {
-        font-size: 0.9rem; /* 60% of 1.5rem */
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
     }
     
     .hero-stats {
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
     }
     
     .stat-number {
-        font-size: 1.8rem; /* 60% of 3rem */
+        font-size: 1.6rem;
     }
     
     .stat-label {
-        font-size: 0.72rem; /* 60% of 1.2rem */
+        font-size: 0.8rem;
     }
     
+    /* Buttons */
     .btn {
-        padding: 0.6rem 1.2rem;
+        padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+        width: 100%;
+        max-width: 280px;
     }
     
+    /* Section Headers */
     .section-header h2 {
-        font-size: 2.1rem; /* 60% of 3.5rem */
+        font-size: 1.8rem;
+        line-height: 1.3;
     }
     
     .section-header p {
-        font-size: 0.9rem; /* 60% of 1.5rem */
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
     
+    /* Feature Cards */
     .feature-card h3 {
-        font-size: 1.2rem; /* 60% of 2rem */
+        font-size: 1.1rem;
+        line-height: 1.3;
     }
     
     .feature-card p {
-        font-size: 0.84rem; /* 60% of 1.4rem */
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
     
+    /* Pricing Cards */
     .pricing-card h3 {
-        font-size: 1.5rem; /* 60% of 2.5rem */
+        font-size: 1.3rem;
     }
     
     .price {
-        font-size: 2.4rem; /* 60% of 4rem */
+        font-size: 2rem;
     }
     
     .pricing-card li {
-        font-size: 0.84rem; /* 60% of 1.4rem */
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
     
-    /* Scale down visual elements */
+    /* Visual Elements - Proper mobile scaling */
     .hero-visual {
-        transform: scale(0.6);
+        transform: scale(0.7);
+        transform-origin: center top;
         margin-top: 1rem;
+        max-width: 100%;
+        overflow: hidden;
     }
     
     .floating-shapes {
-        transform: scale(0.6);
+        transform: scale(0.7);
+        transform-origin: center;
     }
     
-    /* Adjust spacing */
+    /* Dashboard Preview - Mobile optimized */
+    .dashboard-preview {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 240px !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        overflow: hidden !important;
+    }
+    
+    .dashboard-content {
+        padding: 0.8rem !important;
+    }
+    
+    .widget {
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .widget-header h3 {
+        font-size: 0.9rem !important;
+    }
+    
+    .widget-badge {
+        font-size: 0.8rem !important;
+        padding: 0.2rem 0.5rem !important;
+    }
+    
+    /* Feature Demo - Mobile optimized */
+    .feature-demo {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: 240px !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        border-radius: 12px !important;
+    }
+    
+    /* Demo content scaling */
+    .demo-calendar,
+    .demo-time-slots,
+    .demo-appointments,
+    .demo-chat,
+    .demo-payment,
+    .demo-revenue,
+    .demo-upload-screen,
+    .demo-loading-screen,
+    .demo-analytics-screen,
+    .demo-login-screen {
+        padding: 0.8rem !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .demo-calendar-grid {
+        gap: 0.1rem !important;
+    }
+    
+    .demo-day {
+        font-size: 0.6rem !important;
+        padding: 0.2rem !important;
+    }
+    
+    .demo-time-slot {
+        padding: 0.3rem !important;
+        font-size: 0.7rem !important;
+    }
+    
+    /* Spacing adjustments */
     .hero {
-        padding: 4rem 0 2rem;
-        min-height: 60vh;
+        padding: 3rem 0 2rem;
+        min-height: 70vh;
     }
     
     .features-section,
@@ -3625,24 +3710,50 @@ html {
     
     .container {
         padding: 0 1rem;
+        max-width: 100%;
     }
     
-    /* Single column layouts */
+    /* Layout adjustments */
     .features-grid,
     .pricing-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     
     .hero-buttons {
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.8rem;
         align-items: center;
     }
     
-    .btn {
-        width: 100%;
-        max-width: 240px;
+    /* Feature showcase adjustments */
+    .feature-showcase {
+        padding: 2rem 1rem !important;
+        margin: 1rem 0 !important;
+    }
+    
+    .feature-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .feature-text h3 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .feature-text p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Ensure text doesn't overflow */
+    .hero-content,
+    .feature-card,
+    .pricing-card,
+    .feature-text {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
@@ -3748,9 +3859,7 @@ html {
     }
 }
 
-/* Mobile Responsiveness Fixes - Comprehensive Update */
-
-/* Fix for squished animated images and demo elements on mobile */
+/* Mobile Demo Elements - Optimized for Mobile */
 @media (max-width: 768px) {
     /* Reset all 3D transforms and perspective effects on mobile */
     .feature-demo,
@@ -3771,51 +3880,38 @@ html {
         transform: none !important;
     }
     
-    /* Scale down demo elements to fit mobile screens */
-    .feature-demo {
-        width: 100% !important;
-        height: 300px !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Mobile-specific demo sizing */
+    /* Mobile-specific demo sizing - keep them visible but properly sized */
     #booking-demo,
     #chat-demo,
     #payment-demo,
     #revenue-demo,
     #merge-demo {
         width: 100% !important;
-        height: 280px !important;
-        max-width: 100% !important;
+        max-width: 320px !important;
+        height: 240px !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
     
     /* Mobile demo specific - scale down phone frame */
     #mobile-demo {
         width: 100% !important;
-        height: 320px !important;
+        max-width: 280px !important;
+        height: 280px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
     }
     
     .demo-phone-frame {
-        width: 200px !important;
-        height: 400px !important;
+        width: 160px !important;
+        height: 320px !important;
         transform: none !important;
         margin: 0 auto !important;
     }
     
     .demo-phone-screen {
-        border-radius: 20px !important;
-    }
-    
-    /* Scale down dashboard preview */
-    .dashboard-preview {
-        width: 100% !important;
-        max-width: 100% !important;
-        transform: none !important;
-        margin: 0 auto !important;
+        border-radius: 16px !important;
     }
     
     /* Adjust demo content for mobile */
@@ -3829,23 +3925,23 @@ html {
     .demo-loading-screen,
     .demo-analytics-screen,
     .demo-login-screen {
-        padding: 1rem !important;
-        font-size: 0.9rem !important;
+        padding: 0.8rem !important;
+        font-size: 0.8rem !important;
     }
     
     /* Scale down demo elements */
     .demo-calendar-grid {
-        gap: 0.15rem !important;
+        gap: 0.1rem !important;
     }
     
     .demo-day {
         font-size: 0.6rem !important;
-        padding: 0.25rem !important;
+        padding: 0.2rem !important;
     }
     
     .demo-time-slot {
-        padding: 0.5rem !important;
-        font-size: 0.8rem !important;
+        padding: 0.3rem !important;
+        font-size: 0.7rem !important;
     }
     
     .demo-appointment {
