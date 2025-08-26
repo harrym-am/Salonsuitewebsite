@@ -957,6 +957,33 @@
         font-size: 0.9rem !important;
     }
     
+    /* Platforms grid mobile adjustments */
+    .platforms-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .platform-card {
+        padding: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .platform-card h4 {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .platform-card p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .platform-icon {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
     /* CTA section mobile adjustments */
     .cta-content h2 {
         font-size: 2rem !important;

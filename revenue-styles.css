@@ -815,6 +815,38 @@
     .step-text p {
         font-size: 0.95rem !important;
         line-height: 1.6 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .step-features {
+        text-align: left !important;
+        gap: 0.75rem !important;
+    }
+    
+    .step-features li {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        gap: 0.5rem !important;
+    }
+    
+    .step-features i {
+        font-size: 0.75rem !important;
+        min-width: 16px !important;
+    }
+    
+    .step-visual .feature-card {
+        padding: 1.25rem !important;
+        text-align: center !important;
+    }
+    
+    .step-visual .feature-card h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .step-visual .feature-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
     
     /* Metrics grid mobile adjustments */
