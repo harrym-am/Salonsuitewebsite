@@ -708,67 +708,22 @@
 
 /* Comprehensive Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-    /* Reset all 3D transforms and perspective effects on mobile */
+    /* Hide graphics on mobile for cleaner experience */
     .revenue-demo,
     .demo-revenue,
     .demo-revenue-content {
-        transform: none !important;
-        perspective: none !important;
-        transform-style: flat !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        display: none !important;
     }
     
-    /* Remove hover effects that cause issues on mobile */
-    .revenue-demo:hover,
-    .demo-revenue:hover {
-        transform: none !important;
-    }
-    
-    /* Scale down demo elements to fit mobile screens */
-    .revenue-demo {
-        height: 300px !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Mobile-specific demo sizing */
-    .demo-revenue {
-        height: 280px !important;
-    }
-    
-    /* Adjust demo content for mobile */
-    .demo-revenue-header {
-        padding: 1rem !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .demo-revenue-header h3 {
-        font-size: 1rem !important;
-    }
-    
-    .demo-revenue-balance {
-        font-size: 1rem !important;
-    }
-    
-    .demo-revenue-transactions {
-        gap: 0.5rem !important;
-        padding: 0 1rem !important;
-    }
-    
-    .demo-transaction {
-        padding: 0.5rem !important;
-    }
-    
-    .demo-transaction-description {
-        font-size: 0.75rem !important;
-    }
-    
-    .demo-transaction-time {
-        font-size: 0.65rem !important;
-    }
-    
+    /* Hide demo content on mobile */
+    .demo-revenue-header,
+    .demo-revenue-balance,
+    .demo-revenue-transactions,
+    .demo-transaction,
+    .demo-transaction-description,
+    .demo-transaction-time,
     .demo-transaction-amount {
-        font-size: 0.8rem !important;
+        display: none !important;
     }
     
     /* Hero section mobile adjustments */
@@ -816,9 +771,40 @@
     
     /* Journey steps mobile adjustments */
     .journey-step {
+        margin-bottom: 3rem !important;
+        padding: 0 1rem !important;
+    }
+    
+    .journey-step .step-content {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
         text-align: center !important;
+    }
+    
+    .journey-step.reverse .step-content {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .journey-step.reverse .step-text {
+        order: 1 !important;
+    }
+    
+    .journey-step.reverse .step-visual {
+        order: 2 !important;
+    }
+    
+    .step-number {
+        font-size: 2.5rem !important;
+        top: -1rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+    }
+    
+    .journey-step.reverse .step-number {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
     }
     
     .step-text h3 {
@@ -829,6 +815,38 @@
     .step-text p {
         font-size: 0.95rem !important;
         line-height: 1.6 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .step-features {
+        text-align: left !important;
+        gap: 0.75rem !important;
+    }
+    
+    .step-features li {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        gap: 0.5rem !important;
+    }
+    
+    .step-features i {
+        font-size: 0.75rem !important;
+        min-width: 16px !important;
+    }
+    
+    .step-visual .feature-card {
+        padding: 1.25rem !important;
+        text-align: center !important;
+    }
+    
+    .step-visual .feature-card h4 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .step-visual .feature-card p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
     
     /* Metrics grid mobile adjustments */
@@ -993,6 +1011,8 @@
     
     .container {
         overflow-x: hidden !important;
+        padding: 0 1rem !important;
+        max-width: 100% !important;
     }
     
     /* Optimize form elements */
@@ -1001,5 +1021,89 @@
     select {
         font-size: 16px !important; /* Prevents zoom on iOS */
         padding: 12px !important;
+    }
+    
+    /* Fix text overflow issues */
+    .hero-title,
+    .hero-description,
+    .section-header h2,
+    .section-header p,
+    .step-text h3,
+    .step-text p,
+    .report-text h3,
+    .report-text p,
+    .cta-content h2,
+    .cta-content p,
+    .feature-card h4,
+    .feature-card p,
+    .metric-card h4,
+    .metric-card p {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+    
+    /* Ensure proper text sizing */
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* Fix layout issues */
+    .hero-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .journey-step {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .report-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Fix button sizing */
+    .cta-primary {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-actions {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
     }
 }
