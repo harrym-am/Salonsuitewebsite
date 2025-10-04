@@ -1396,9 +1396,8 @@ class EmailValidationModal {
     }
     
     upgradePlan() {
-        // Redirect to pricing or upgrade page
-        document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
-        this.closeModal();
+        // Redirect to login page for paid plan upgrade
+        window.location.href = 'https://app.salonsuite.app/login';
     }
 }
 
