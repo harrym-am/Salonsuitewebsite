@@ -1109,7 +1109,7 @@ class EmailValidationModal {
         this.btnText = this.continueBtn.querySelector('.btn-text');
         
         // API Configuration - Update this URL to match your backend
-        this.API_BASE_URL = 'https://api.salonsuite.app'; // Change this to your actual backend URL
+        this.API_BASE_URL = 'https://salon-suite.onrender.com'; // Change this to your actual backend URL
         
         // State management
         this.currentStripeUrl = null;
