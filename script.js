@@ -1408,24 +1408,24 @@ let emailModal = null;
 document.addEventListener('DOMContentLoaded', () => {
     emailModal = new EmailValidationModal();
     
-    // Override all "Start Free Trial" buttons
-    const trialButtons = document.querySelectorAll('a[href*="stripe.com"], a[href="#pricing"]');
-    trialButtons.forEach(button => {
-        // Only override buttons that contain "Start Free Trial" text
-        if (button.textContent.toLowerCase().includes('start free trial') || 
-            button.textContent.toLowerCase().includes('start your free trial')) {
-            
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Get the Stripe URL from the href attribute
-                const stripeUrl = button.getAttribute('href');
-                
-                // Open the email validation modal
-                if (emailModal) {
-                    emailModal.openModal(stripeUrl);
-                }
-            });
-        }
-    });
+       // Override only plan-specific "Start Free Trial" buttons (not navigation buttons)
+       const trialButtons = document.querySelectorAll('a[href*="stripe.com"]');
+       trialButtons.forEach(button => {
+           // Only override buttons that contain "Start Free Trial" text AND are Stripe links
+           if (button.textContent.toLowerCase().includes('start free trial') || 
+               button.textContent.toLowerCase().includes('start your free trial')) {
+               
+               button.addEventListener('click', (e) => {
+                   e.preventDefault();
+                   
+                   // Get the Stripe URL from the href attribute
+                   const stripeUrl = button.getAttribute('href');
+                   
+                   // Open the email validation modal
+                   if (emailModal) {
+                       emailModal.openModal(stripeUrl);
+                   }
+               });
+           }
+       });
 });
