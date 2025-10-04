@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="icons/Salon Suite Logo (black on white).png" alt="Salon Suite" class="logo-image">
+                <img src="icons/logo.png" alt="Salon Suite" class="logo-image">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -366,6 +366,102 @@
             </div>
         </div>
     </section>
+
+    <!-- Email Validation Modal -->
+    <div id="email-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-subtitle">
+        <div class="modal-container" tabindex="-1">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title">Start Your Free Trial</h2>
+                <p id="modal-subtitle" class="modal-subtitle">Enter your email to continue</p>
+            </div>
+            <div class="modal-body">
+                <!-- Email Input Form -->
+                <div id="email-form-state" class="email-form-state">
+                    <form class="email-form" id="trial-email-form">
+                        <div class="form-group">
+                            <label for="email-input" class="form-label">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email-input" 
+                                class="form-input" 
+                                placeholder="Enter your email address"
+                                required
+                                autocomplete="email"
+                            >
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+                        <div class="modal-buttons">
+                            <button type="button" class="modal-btn modal-btn-secondary" id="cancel-btn">Cancel</button>
+                            <button type="submit" class="modal-btn modal-btn-primary" id="continue-btn">
+                                <span class="btn-text">Continue to Payment</span>
+                                <div class="loading-spinner" id="loading-spinner"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-state" class="loading-state" style="display: none;">
+                    <div class="success-icon">
+                        <div class="loading-spinner show"></div>
+                    </div>
+                    <h3 class="success-title">Checking Eligibility...</h3>
+                    <p class="success-message">Please wait while we verify your trial eligibility.</p>
+                </div>
+
+                <!-- Ineligible State -->
+                <div id="ineligible-state" class="ineligible-state" style="display: none;">
+                    <div class="ineligible-content">
+                        <div class="ineligible-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="ineligible-title">Trial Already Used</h3>
+                        <p class="ineligible-message" id="ineligible-message">
+                            This email address has already used our free trial.
+                        </p>
+                        <div class="ineligible-suggestions" id="ineligible-suggestions">
+                            <h4>What you can do:</h4>
+                            <ul id="suggestions-list">
+                                <!-- Suggestions will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        <div class="ineligible-buttons">
+                            <button type="button" class="modal-btn modal-btn-secondary" id="try-different-email">Try Different Email</button>
+                            <button type="button" class="modal-btn modal-btn-outline" id="contact-support">Contact Support</button>
+                            <button type="button" class="modal-btn modal-btn-primary" id="upgrade-plan">Upgrade to Paid Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error State -->
+                <div id="error-state" class="error-state" style="display: none;">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <h3 class="error-title">Unable to Verify</h3>
+                    <p class="error-message">
+                        We couldn't verify your trial eligibility at this time. You can still proceed with the trial.
+                    </p>
+                    <div class="modal-buttons">
+                        <button type="button" class="modal-btn modal-btn-secondary" id="error-cancel">Cancel</button>
+                        <button type="button" class="modal-btn modal-btn-primary" id="continue-anyway">Continue Anyway</button>
+                    </div>
+                </div>
+
+                <!-- Success State -->
+                <div id="success-state" class="success-state" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="success-title">Eligible for Trial!</h3>
+                    <p class="success-message">
+                        Great! You're eligible for our free trial. Redirecting you to the payment page...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

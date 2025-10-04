@@ -1096,3 +1096,336 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Email Validation Modal System
+class EmailValidationModal {
+    constructor() {
+        this.modal = document.getElementById('email-modal');
+        this.modalContainer = this.modal.querySelector('.modal-container');
+        this.emailInput = document.getElementById('email-input');
+        this.emailForm = document.getElementById('trial-email-form');
+        this.continueBtn = document.getElementById('continue-btn');
+        this.loadingSpinner = document.getElementById('loading-spinner');
+        this.btnText = this.continueBtn.querySelector('.btn-text');
+        
+        // API Configuration - Update this URL to match your backend
+        this.API_BASE_URL = 'https://api.salonsuite.app'; // Change this to your actual backend URL
+        
+        // State management
+        this.currentStripeUrl = null;
+        this.isLoading = false;
+        
+        this.init();
+    }
+    
+    init() {
+        this.bindEvents();
+        this.setupAccessibility();
+    }
+    
+    bindEvents() {
+        // Form submission
+        this.emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleEmailSubmit();
+        });
+        
+        // Modal close events
+        this.modal.querySelector('.modal-close').addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) {
+                this.closeModal();
+            }
+        });
+        
+        // Cancel button
+        document.getElementById('cancel-btn').addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        // Ineligible state buttons
+        document.getElementById('try-different-email').addEventListener('click', () => {
+            this.showEmailForm();
+        });
+        
+        document.getElementById('contact-support').addEventListener('click', () => {
+            this.contactSupport();
+        });
+        
+        document.getElementById('upgrade-plan').addEventListener('click', () => {
+            this.upgradePlan();
+        });
+        
+        // Error state buttons
+        document.getElementById('error-cancel').addEventListener('click', () => {
+            this.closeModal();
+        });
+        
+        document.getElementById('continue-anyway').addEventListener('click', () => {
+            this.redirectToStripe();
+        });
+        
+        // Keyboard events
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+                this.closeModal();
+            }
+        });
+        
+        // Email input validation
+        this.emailInput.addEventListener('input', () => {
+            this.clearEmailError();
+        });
+    }
+    
+    setupAccessibility() {
+        // Set initial ARIA attributes
+        this.modal.setAttribute('aria-hidden', 'true');
+        this.modalContainer.setAttribute('tabindex', '-1');
+    }
+    
+    openModal(stripeUrl) {
+        this.currentStripeUrl = stripeUrl;
+        this.showEmailForm();
+        this.modal.classList.add('active');
+        this.modal.setAttribute('aria-hidden', 'false');
+        
+        // Focus management
+        setTimeout(() => {
+            this.emailInput.focus();
+        }, 300);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('active');
+        this.modal.setAttribute('aria-hidden', 'true');
+        
+        // Restore body scroll
+        document.body.style.overflow = '';
+        
+        // Reset form
+        this.emailForm.reset();
+        this.clearEmailError();
+        
+        // Reset to initial state
+        setTimeout(() => {
+            this.showEmailForm();
+        }, 300);
+    }
+    
+    showEmailForm() {
+        this.hideAllStates();
+        document.getElementById('email-form-state').style.display = 'block';
+        this.modal.querySelector('.modal-title').textContent = 'Start Your Free Trial';
+        this.modal.querySelector('.modal-subtitle').textContent = 'Enter your email to continue';
+    }
+    
+    showLoadingState() {
+        this.hideAllStates();
+        document.getElementById('loading-state').style.display = 'block';
+        this.modal.querySelector('.modal-title').textContent = 'Checking Eligibility...';
+        this.modal.querySelector('.modal-subtitle').textContent = 'Please wait while we verify your trial eligibility.';
+    }
+    
+    showIneligibleState(response) {
+        this.hideAllStates();
+        document.getElementById('ineligible-state').style.display = 'block';
+        this.modal.querySelector('.modal-title').textContent = 'Trial Already Used';
+        this.modal.querySelector('.modal-subtitle').textContent = 'This email has already used our free trial.';
+        
+        // Update message if provided by API
+        const messageElement = document.getElementById('ineligible-message');
+        if (response.message) {
+            messageElement.textContent = response.message;
+        }
+        
+        // Update suggestions if provided by API
+        const suggestionsList = document.getElementById('suggestions-list');
+        if (response.suggestions && Array.isArray(response.suggestions)) {
+            suggestionsList.innerHTML = response.suggestions.map(suggestion => 
+                `<li><i class="fas fa-check"></i> ${suggestion}</li>`
+            ).join('');
+        } else {
+            // Default suggestions
+            suggestionsList.innerHTML = `
+                <li><i class="fas fa-check"></i> Try a different email address</li>
+                <li><i class="fas fa-check"></i> Contact support for assistance</li>
+                <li><i class="fas fa-check"></i> Upgrade to a paid plan</li>
+            `;
+        }
+        
+        // Show/hide contact support button based on API response
+        const contactSupportBtn = document.getElementById('contact-support');
+        if (response.can_contact_support === false) {
+            contactSupportBtn.style.display = 'none';
+        } else {
+            contactSupportBtn.style.display = 'flex';
+        }
+    }
+    
+    showErrorState() {
+        this.hideAllStates();
+        document.getElementById('error-state').style.display = 'block';
+        this.modal.querySelector('.modal-title').textContent = 'Unable to Verify';
+        this.modal.querySelector('.modal-subtitle').textContent = 'We couldn\'t verify your trial eligibility at this time.';
+    }
+    
+    showSuccessState() {
+        this.hideAllStates();
+        document.getElementById('success-state').style.display = 'block';
+        this.modal.querySelector('.modal-title').textContent = 'Eligible for Trial!';
+        this.modal.querySelector('.modal-subtitle').textContent = 'Great! You\'re eligible for our free trial.';
+        
+        // Redirect after a short delay
+        setTimeout(() => {
+            this.redirectToStripe();
+        }, 2000);
+    }
+    
+    hideAllStates() {
+        const states = ['email-form-state', 'loading-state', 'ineligible-state', 'error-state', 'success-state'];
+        states.forEach(state => {
+            document.getElementById(state).style.display = 'none';
+        });
+    }
+    
+    async handleEmailSubmit() {
+        const email = this.emailInput.value.trim();
+        
+        if (!this.validateEmail(email)) {
+            this.showEmailError('Please enter a valid email address.');
+            return;
+        }
+        
+        this.setLoadingState(true);
+        this.showLoadingState();
+        
+        try {
+            const response = await this.checkTrialEligibility(email);
+            
+            if (response.eligible === true) {
+                this.showSuccessState();
+            } else {
+                this.showIneligibleState(response);
+            }
+        } catch (error) {
+            console.error('Trial eligibility check failed:', error);
+            this.showErrorState();
+        } finally {
+            this.setLoadingState(false);
+        }
+    }
+    
+    async checkTrialEligibility(email) {
+        try {
+            const response = await fetch(`${this.API_BASE_URL}/api/check-trial-eligibility?email=${encodeURIComponent(email)}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('API call failed:', error);
+            // Return a fallback response that allows continuation
+            return { 
+                eligible: true, 
+                error: 'Unable to check eligibility' 
+            };
+        }
+    }
+    
+    validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    showEmailError(message) {
+        const errorElement = document.getElementById('email-error');
+        errorElement.textContent = message;
+        errorElement.classList.add('show');
+        this.emailInput.classList.add('error');
+    }
+    
+    clearEmailError() {
+        const errorElement = document.getElementById('email-error');
+        errorElement.classList.remove('show');
+        this.emailInput.classList.remove('error');
+    }
+    
+    setLoadingState(loading) {
+        this.isLoading = loading;
+        this.continueBtn.disabled = loading;
+        
+        if (loading) {
+            this.loadingSpinner.classList.add('show');
+            this.btnText.style.opacity = '0.7';
+        } else {
+            this.loadingSpinner.classList.remove('show');
+            this.btnText.style.opacity = '1';
+        }
+    }
+    
+    redirectToStripe() {
+        if (this.currentStripeUrl) {
+            window.location.href = this.currentStripeUrl;
+        } else {
+            // Fallback to pricing section
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+            this.closeModal();
+        }
+    }
+    
+    contactSupport() {
+        // Open support contact (you can customize this)
+        window.open('mailto:support@salonsuite.app?subject=Trial Eligibility Support', '_blank');
+        this.closeModal();
+    }
+    
+    upgradePlan() {
+        // Redirect to pricing or upgrade page
+        document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        this.closeModal();
+    }
+}
+
+// Initialize the modal system
+let emailModal = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+    emailModal = new EmailValidationModal();
+    
+    // Override all "Start Free Trial" buttons
+    const trialButtons = document.querySelectorAll('a[href*="stripe.com"], a[href="#pricing"]');
+    trialButtons.forEach(button => {
+        // Only override buttons that contain "Start Free Trial" text
+        if (button.textContent.toLowerCase().includes('start free trial') || 
+            button.textContent.toLowerCase().includes('start your free trial')) {
+            
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Get the Stripe URL from the href attribute
+                const stripeUrl = button.getAttribute('href');
+                
+                // Open the email validation modal
+                if (emailModal) {
+                    emailModal.openModal(stripeUrl);
+                }
+            });
+        }
+    });
+});
